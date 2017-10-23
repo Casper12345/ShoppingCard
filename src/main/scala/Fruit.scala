@@ -1,3 +1,8 @@
+
+/**
+  * Algebraic Data Type
+  * Sum Type Pattern
+  */
 sealed trait Fruit {
   val price: Double
 }
