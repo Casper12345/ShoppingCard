@@ -1,3 +1,5 @@
+package NaiveSolution
+
 
 /**
   * Algebraic Data Type

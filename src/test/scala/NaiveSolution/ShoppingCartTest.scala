@@ -1,3 +1,5 @@
+package NaiveSolution
+
 import org.scalatest.FunSuite
 
 class ShoppingCartTest extends FunSuite {

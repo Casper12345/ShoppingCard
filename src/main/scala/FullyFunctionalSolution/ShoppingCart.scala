@@ -19,9 +19,7 @@ class ShoppingCart {
     */
   def checkOutWithDiscount(input: List[Fruit]): Double = {
     def discount(input: List[Fruit], apples: Int, oranges: Int): Double = {
-      val f = Apple.discount
-      val f2 = Orange.discount
-      f(apples) + f2(oranges)
+      Apple.discount(apples) + Orange.discount(oranges)
     }
 
     def sum(input: List[Fruit], fruit: Fruit): Int = fruit match {

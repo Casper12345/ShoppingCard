@@ -11,11 +11,11 @@ sealed trait Fruit {
     case Orange => 0.25
   }
 
-  def discount: Int => Double = this match {
-    case Apple => apples: Int =>
-      if (apples % 2 == 0) (apples / 2) * Apple.price
-      else (apples / 2 + 1) * Apple.price
-    case Orange => oranges: Int => ((oranges / 3 * 2) + (oranges % 3)) * Orange.price
+  def discount(amount: Int): Double = this match {
+    case Apple =>
+      if (amount % 2 == 0) (amount / 2) * Apple.price
+      else (amount / 2 + 1) * Apple.price
+    case Orange => ((amount / 3 * 2) + (amount % 3)) * Orange.price
   }
 
 }
