@@ -1,8 +1,5 @@
 package FullyFunctionalSolution
 
-import scala.annotation.tailrec
-
-
 class ShoppingCart {
 
   /**
@@ -30,23 +27,15 @@ class ShoppingCart {
       }
     }
 
-    @tailrec
-    def sum(input: List[Fruit], fruit: Fruit, acc: Int = 0): Int = fruit match {
-      case Apple => input match {
-        case Nil => acc
-        case h :: t => h match {
-          case Apple => sum(t, fruit, acc + 1)
-          case Orange => sum(t, fruit, acc)
-        }
-
-      }
-      case Orange => input match {
-        case Nil => acc
-        case h :: t => h match {
-          case Orange => sum(t, fruit, acc + 1)
-          case Apple => sum(t, fruit, acc)
-        }
-      }
+    def sum(input: List[Fruit], fruit: Fruit): Int = fruit match {
+      case Apple => input.filter(a => a match {
+        case Apple => true
+        case Orange => false
+      }).map(b => 1).sum
+      case Orange => input.filter(a => a match {
+        case Apple => false
+        case Orange => true
+      }).map(b => 1).sum
     }
 
     discount(input, sum(input, Apple), sum(input, Orange))
