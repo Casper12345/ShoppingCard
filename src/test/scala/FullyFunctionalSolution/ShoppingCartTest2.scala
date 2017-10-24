@@ -2,7 +2,7 @@ package FullyFunctionalSolution
 
 import org.scalatest.FunSuite
 
-class ShoppingCartTest extends FunSuite {
+class ShoppingCartTest2 extends FunSuite {
 
 
   /**
@@ -10,7 +10,7 @@ class ShoppingCartTest extends FunSuite {
     */
   test("testShoppingCart") {
 
-    val sC = new ShoppingCart
+    val sC = new ShoppingCart2
 
     val list = List[Fruit](Apple, Apple, Apple, Apple, Apple)
 
@@ -24,7 +24,7 @@ class ShoppingCartTest extends FunSuite {
     */
   test("testShoppingCart2") {
 
-    val sC = new ShoppingCart
+    val sC = new ShoppingCart2
 
     val list = List[Fruit](Orange, Orange, Orange, Orange, Orange)
 
@@ -38,7 +38,7 @@ class ShoppingCartTest extends FunSuite {
     */
   test("testShoppingCart3") {
 
-    val sC = new ShoppingCart
+    val sC = new ShoppingCart2
 
     val list = List[Fruit](Apple, Apple, Orange, Apple)
 
@@ -51,7 +51,7 @@ class ShoppingCartTest extends FunSuite {
     */
   test("testShoppingDiscountApples") {
 
-    val sC = new ShoppingCart
+    val sC = new ShoppingCart2
 
     assert(sC.checkOutWithDiscount(List[Fruit](Apple, Apple)) == 0.60)
 
@@ -62,7 +62,7 @@ class ShoppingCartTest extends FunSuite {
     */
   test("testShoppingDiscountApples2") {
 
-    val sC = new ShoppingCart
+    val sC = new ShoppingCart2
     assert(sC.checkOutWithDiscount(List[Fruit](Apple)) == 0.60)
 
   }
@@ -72,7 +72,7 @@ class ShoppingCartTest extends FunSuite {
     */
   test("testCheckOutWithDiscount") {
 
-    val sC = new ShoppingCart
+    val sC = new ShoppingCart2
     assert(sC.checkOutWithDiscount(List[Fruit](Orange, Orange, Orange)) == 2 * 0.25)
 
   }
@@ -82,7 +82,7 @@ class ShoppingCartTest extends FunSuite {
     */
   test("testCheckOutWithDiscount2") {
 
-    val sC = new ShoppingCart
+    val sC = new ShoppingCart2
     assert(sC.checkOutWithDiscount(List[Fruit](Orange, Orange, Orange, Apple)) == 2 * 0.25 + 1 * 0.60)
 
   }
@@ -92,7 +92,7 @@ class ShoppingCartTest extends FunSuite {
     */
   test("testCheckOutWithDiscount3") {
 
-    val sC = new ShoppingCart
+    val sC = new ShoppingCart2
     assert(sC.checkOutWithDiscount(List[Fruit](Orange, Orange, Orange, Apple, Apple)) == 2 * 0.25 + 1 * 0.60)
 
   }
@@ -102,7 +102,7 @@ class ShoppingCartTest extends FunSuite {
     */
   test("testCheckOutWithDiscount4") {
 
-    val sC = new ShoppingCart
+    val sC = new ShoppingCart2
     assert(sC.checkOutWithDiscount(List[Fruit](Orange, Orange, Orange, Apple, Apple, Apple)) == 2 * 0.25 + 2 * 0.60)
 
   }

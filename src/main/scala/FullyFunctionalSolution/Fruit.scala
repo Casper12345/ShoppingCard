@@ -6,12 +6,12 @@ package FullyFunctionalSolution
   * Sum Type Pattern
   */
 sealed trait Fruit {
-  def price: Double = this match {
-    case Apple => 0.60
-    case Orange => 0.25
+  def price: Int = this match {
+    case Apple => 60
+    case Orange => 25
   }
 
-  def discount(amount: Int): Double = this match {
+  def discount(amount: Int): Int = this match {
     case Apple =>
       if (amount % 2 == 0) (amount / 2) * Apple.price
       else (amount / 2 + 1) * Apple.price
