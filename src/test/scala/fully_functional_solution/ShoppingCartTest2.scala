@@ -1,4 +1,4 @@
-package FullyFunctionalSolution
+package fully_functional_solution
 
 import org.scalatest.FunSuite
 

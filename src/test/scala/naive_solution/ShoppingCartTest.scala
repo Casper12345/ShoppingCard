@@ -1,4 +1,4 @@
-package NaiveSolution
+package naive_solution
 
 import org.scalatest.FunSuite
 

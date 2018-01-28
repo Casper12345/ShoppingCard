@@ -1,4 +1,4 @@
-package NaiveSolution
+package naive_solution
 
 
 class ShoppingCart {

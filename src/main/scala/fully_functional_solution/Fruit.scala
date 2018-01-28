@@ -1,5 +1,4 @@
-package FullyFunctionalSolution
-
+package fully_functional_solution
 
 /**
   * Algebraic Data Type

@@ -1,4 +1,4 @@
-package FullyFunctionalSolution
+package fully_functional_solution
 
 class ShoppingCart2 {
 
@@ -26,11 +26,11 @@ class ShoppingCart2 {
       case Apple => input.filter(a => a match {
         case Apple => true
         case Orange => false
-      }).map(b => 1).sum
+      }).map(_ => 1).sum
       case Orange => input.filter(a => a match {
         case Apple => false
         case Orange => true
-      }).map(b => 1).sum
+      }).map(_ => 1).sum
     }
 
     discount(input, sum(input, Apple), sum(input, Orange))

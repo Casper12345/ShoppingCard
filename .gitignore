@@ -12,5 +12,6 @@
 build.sbt
 project/
 target/
+*.iml
 *.xml
 
